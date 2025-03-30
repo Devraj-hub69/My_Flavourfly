@@ -901,7 +901,7 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const res = await fetch('http://localhost:7070/api/auth/login', {
+    const res = await fetch('https://my-flavourfly.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -968,7 +968,7 @@ async function fetchProducts() {
 
     setTimeout(async()=>{
     try {
-        const response = await fetch(`http://localhost:7070/api/products?page=${currentPage}`, {
+        const response = await fetch(`https://my-flavourfly.onrender.com/api/products?page=${currentPage}`, {
             method: "GET"
         });
         const data = await response.json();
@@ -1189,7 +1189,7 @@ nextBtn.addEventListener("click", () => {
 //implementation of  search function by throtteling
 async function getData2() {
 
-    const response = await fetch(`http://localhost:7070/api/seachproducts`, {
+    const response = await fetch(`https://my-flavourfly.onrender.com/api/seachproducts`, {
             method: "GET",
             headers:{"Content-Type":"application/json"},
     });
